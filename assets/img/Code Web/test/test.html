@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Example</title>
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hidden-element {
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .container:hover .hidden-element {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Hover me
+        <div class="hidden-element">
+            Hello! I appear on hover.
+        </div>
+    </div>
+</body>
+</html>
